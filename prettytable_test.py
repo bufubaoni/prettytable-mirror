@@ -606,5 +606,17 @@ class PrintJapanestTest(unittest.TestCase):
         print()
         print(self.x)
 
+class PrintChineseTest(unittest.TestCase):
+
+    def setUp(self):
+
+        self.x = PrettyTable(["hanzi", "city", "English"])
+        self.x.add_row(["北京", "こうべ", "Beijing"])
+        self.x.add_row(["西安", "きょうと", "Xi'an"])
+
+
+    def testPrint(self):
+        print()
+        print(self.x)
 if __name__ == "__main__":
     unittest.main()
